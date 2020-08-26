@@ -1,0 +1,26 @@
+{
+  "name": "meal-search",
+  "version": "1.0.0",
+  "description": "meal search",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack -d --mode development --watch",
+    "build-prod": "webpack -p --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SohanR/meal-search.git"
+  },
+  "author": "sohanR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SohanR/meal-search/issues"
+  },
+  "homepage": "https://github.com/SohanR/meal-search#readme"
+}
