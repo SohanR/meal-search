@@ -76,6 +76,54 @@ input[type="text"] {
   border-bottom-right-radius: 4px;
 }
 
+.meals {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-top: 10px;
+}
+
+.meals .meal {
+  cursor: pointer;
+  position: relative;
+  height: 180px;
+  width: 180px;
+  text-align: center;
+}
+
+.meals .meal img {
+  width: 100%;
+  height: 100%;
+  border: 4px #dedede solid;
+}
+
+.meals .meal .meal-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+  opacity: 0;
+}
+
+.meals .meal:hover .meal-info {
+  opacity: 1;
+}
+
 @media (max-width: 500px) {
   input[type="text"] {
     width: 100%;
