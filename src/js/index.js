@@ -20,7 +20,7 @@ function searchMeal(e) {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        //console.log(data);
 
         resultHeading.innerHTML = `<h2>Search result for '${term}':</h2>`;
 
@@ -49,9 +49,30 @@ function searchMeal(e) {
   }
 }
 
+//get meal all info by id
+function getMealById(mealID) {
+  fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
+}
+
 //Event Listeners
 submit.addEventListener("submit", searchMeal);
 
 mealsEL.addEventListener("click", (e) => {
-  const mealInfo = e.path.find((item) => {});
+  const mealInfo = e.composedPath().find((item) => {
+    if (item.classList) {
+      return item.classList.contains("meal-info");
+    } else {
+      return false;
+    }
+  });
+
+  if (mealInfo) {
+    const mealID = mealInfo.getAttribute("data-mealid");
+
+    getMealById(mealID);
+  }
 });
