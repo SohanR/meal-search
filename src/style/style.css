@@ -124,6 +124,25 @@ input[type="text"] {
   opacity: 1;
 }
 
+.single-meal {
+  margin: 30px auto;
+  width: 70%;
+}
+
+.single-meal img {
+  width: 300px;
+  margin: 15px;
+  border: 4px #fff solid;
+  border-radius: 3px;
+}
+
+.single-meal-info {
+  margin: 20px;
+  padding: 10px;
+  border: 2px #743b3b dashed;
+  border-radius: 5px;
+}
+
 @media (max-width: 500px) {
   input[type="text"] {
     width: 100%;

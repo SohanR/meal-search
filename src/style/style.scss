@@ -108,6 +108,25 @@ input[type="text"] {
   }
 }
 
+.single-meal {
+  margin: 30px auto;
+  width: 70%;
+
+  img {
+    width: 300px;
+    margin: 15px;
+    border: 4px #fff solid;
+    border-radius: 3px;
+  }
+}
+
+.single-meal-info {
+  margin: 20px;
+  padding: 10px;
+  border: 2px rgb(116, 59, 59) dashed;
+  border-radius: 5px;
+}
+
 @media (max-width: 500px) {
   input[type="text"] {
     width: 100%;
