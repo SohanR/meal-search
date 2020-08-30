@@ -5,7 +5,12 @@
 }
 
 body {
-  background-image: linear-gradient(85deg, #20ecf3 10%, #4c83ff 100%);
+  background: #00c6ff;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#0072ff), to(#00c6ff));
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
   margin: 0;
 }
@@ -141,6 +146,30 @@ input[type="text"] {
   padding: 10px;
   border: 2px #743b3b dashed;
   border-radius: 5px;
+}
+
+.main p {
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  color: #2d2013;
+}
+
+.main ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.main ul li {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  background: #fff;
+  display: inline-block;
+  color: #2d2013;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 0 5px 5px 0;
 }
 
 @media (max-width: 500px) {
