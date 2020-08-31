@@ -62,6 +62,8 @@ function getMealById(mealID) {
 
 //add meal to dom
 function addMealToDOM(meal) {
+  resultHeading.style.display = "none";
+  mealsEL.style.display = "none";
   const ingredients = [];
 
   for (let i = 1; i <= 20; i++) {
